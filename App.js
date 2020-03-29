@@ -1,5 +1,11 @@
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  View,
+  FlatList,
+  TouchableOpacity
+} from "react-native";
 import Header from "./components/header";
 import BottomTabBar from "./components/bottom-tab";
 import VideoItem from "./components/video-item";
@@ -10,7 +16,17 @@ export default function App() {
     <View style={styles.container}>
       <Header />
       <View style={styles.body}>
-        <VideoItem video={data.items[0]} />
+        <FlatList
+          data={data.items}
+          ItemSeparatorComponent={() => (
+            <View style={{ height: 0.5, backgroundColor: "#cccccc" }} />
+          )}
+          renderItem={video => (
+            <TouchableOpacity>
+              <VideoItem video={video.item} />
+            </TouchableOpacity>
+          )}
+        />
       </View>
 
       <BottomTabBar />

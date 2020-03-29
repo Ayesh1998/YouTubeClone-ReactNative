@@ -10,7 +10,7 @@ const Header = () => {
   return (
     <View style={styles.header}>
       <Image
-        source={require("../assets/yt_logo_rgb_dark.png")}
+        source={require("../assets/yt_logo_rgb_light.png")}
         style={{ width: 98, height: 22 }}
       />
 
