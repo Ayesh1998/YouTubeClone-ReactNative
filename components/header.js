@@ -16,6 +16,9 @@ const Header = () => {
 
       <View style={styles.icons}>
         <TouchableOpacity>
+          <MaterialIcons name="videocam" size={25} color="#7c7d80" />
+        </TouchableOpacity>
+        <TouchableOpacity>
           <MaterialIcons name="search" size={25} color="#7c7d80" />
         </TouchableOpacity>
         <TouchableOpacity>
@@ -39,7 +42,8 @@ const styles = StyleSheet.create({
   },
   icons: {
     flexDirection: "row",
-    width: wp("22%"),
+    width: wp("31%"),
+    // marginLeft: 5,
     justifyContent: "space-around"
   }
 });
